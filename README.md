@@ -13,15 +13,16 @@ I've tried my best to make the code work out-of-the-box, and provide an extensib
 ### Prerequisites
 
 The list of requirements for this project is extremely short:
-- Python 3.5+
-- [PyTorch 1.2+](https://pytorch.org/)
-- Numpy
-- CUDA-capable NVIDIA GPU (CPU-only training still works)
+- Python v3.5+
+- [PyTorch v1.2+](https://pytorch.org/)
+- [Numpy](https://numpy.org/) (will be installed along PyTorch)
+- (Optional) [CUDA toolkit](https://developer.nvidia.com/cuda-toolkit) with an NVIDIA GPU (for faster training, although CPU-only training still works)
 
 All the requirements are included in `requirements.txt`.
 
 ### Running the Code:
 
+Running the code involves 3 easy steps:
 
 1) Obtain the sources
 ```
@@ -29,19 +30,19 @@ git clone https://github.com/Maghoumi/DeepGRU.git
 cd DeepGRU
 ```
 
-2) Install the dependencies
+2) Install the dependencies (make sure the correct `pip` is used)
 ```
-pip3 install -r requirements.txt
+pip install -r requirements.txt
 ```
 
-3) Run the code
+3) Run the code (make sure the correct `python` (v3.5+) is used)
 ```
-python3 main.py
+python main.py
 ```
 
 The above code will download the [SBU Kinect Interaction](https://www3.cs.stonybrook.edu/~kyun/research/kinect_interaction/index.html) dataset and run the standard 5-fold cross-validation experiments. The dataset will be downloaded to `DeepGRU/data` and the run results will be dumped under `DeepGRU/logs`.
 
-The training progress will be showed in the standard output, and you should a recognition accuracy of about 95.5% if all folds run to completion.
+The training progress will be showed in the standard output, and you should see an average recognition accuracy of about 95.5% if all folds run to completion.
 
 
 ## A Few Notes
